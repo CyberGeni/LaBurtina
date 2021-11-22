@@ -1,6 +1,7 @@
 <template>
-  <div id="app">
-    <h1 class="flex justify-center align-center text-gray-700 text-3xl center h-6/6">Coming Soon</h1>
+  <div id="app" class="grid align-center h-100">
+    <h1 class="flex justify-center align-center text-gray-700 text-3xl center h-6/6">LaBurtina Spices</h1>
+    <h2 class="flex justify-center align-center text-gray-700 text-2xl center h-6/6">Coming Soon</h2>
   </div>
 </template>
 
