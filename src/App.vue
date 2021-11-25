@@ -1,18 +1,20 @@
 <template>
   <div id="app" class="grid align-center h-100">
-    <app-header></app-header>
-    <account></account>
+    
+    <router-view>
+      <app-header></app-header>
+    </router-view>
   </div>
 </template>
 
 <script>
-import Header from './assets/components/Header.vue'
-import Account from './assets/components/account/Account.vue'
+import Header from './components/Header.vue'
+import Shop from './components/shop/shop.vue'
 
 export default {
   components: {
     'app-header': Header,
-    'account': Account,
+    'shop': Shop,
     },
   data () {
     return {

@@ -1,32 +1,38 @@
 <template>
     <div>
+        <guest-header></guest-header>
         <h1>Create an account</h1>
         <form action="" method="get" class="grid">
             <input type="text" placeholder="Full Name">
             <input type="email" placeholder="Enter your Email">
             <input type="password" placeholder="Password">
             <input type="password" placeholder="Repeat your Password">
-            <small>Forgot Password?</small>
+            
             <input type="button" value="REGISTER">
-            <p>Already have an account? <a href="">Login</a></p>
+            <p>Already have an account? <router-link to='/login'>Log In</router-link></p>
         </form>
     </div>
 </template>
 <script>
+import GuestHeader from '../guest-header.vue'
 export default {
-    
+    components: {
+        'guest-header': GuestHeader
+    }
 }
 </script>
 <style scoped>
-    form {
+    div {
         display: flex;
-        width: 100%;
+        width: 90%;
+        max-width: 500px;
+        margin: auto;
         flex-wrap: wrap;
-        flex-grow: 1;
+        overflow: hidden;
     }
     input {
-        padding: 10px;
-        width: 100%;
+        padding: 10px 12px;
+        width: 93%;
     }
     form > * + * {
           margin-top: 1rem;
