@@ -7,5 +7,6 @@ export default [
     {path: '/', component: Shop},
     {path: '/login', component: Login},
     {path: '/signup', component: Signup},
-    {path: '/account', component: Account}
+    {path: '/account', component: Account},
+    {path: '/shop', component: Shop}
 ]

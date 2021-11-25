@@ -1,5 +1,6 @@
 <template>
     <div class="account-options">
+        <guest-header></guest-header>
         <div class="buttons">
             <button @click="login = true, signup = false">Login</button>
             <button @click="signup = true, login = false">Sign Up</button>
@@ -9,13 +10,15 @@
    </div>
 </template>
 <script>
-import Signup from './Signup.vue'
-import Login from './Login.vue'
+import Signup from './signup.vue'
+import Login from './login.vue'
+import GuestHeader from '../guest-header.vue'
 
 export default {
     components: {
         'login': Login,
-        'sign-up': Signup
+        'sign-up': Signup,
+        'guest-header': GuestHeader
     },
     data() {
         return {
@@ -36,13 +39,12 @@ export default {
         justify-content: center;
         width: 90%;
         max-width: 500px;
-        height: 70vh;
         overflow-y: hidden;
-        margin: 6em auto 0 auto;
+        margin: auto;
     }
     .buttons {
         display: flex;
-        width: 100%;
+        width: 90%;     
     }
     button {
         display: flex;

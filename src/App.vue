@@ -1,20 +1,15 @@
 <template>
-  <div id="app" class="grid align-center h-100">
-    
-    <router-view>
-      <app-header></app-header>
-    </router-view>
+  <div id="app" class="grid align-center h-100">   
+      <router-view></router-view>    
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue'
 import Shop from './components/shop/shop.vue'
 
 export default {
   components: {
-    'app-header': Header,
-    'shop': Shop,
+    'shop': Shop
     },
   data () {
     return {
@@ -25,15 +20,18 @@ export default {
 </script>
 
 <style>
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Lora', 'Segoe UI';
 }
 ::placeholder, small, p, button {
   font-family: 'Outfit', 'Segoe UI';
-  
 }
 ::placeholder {
-  font-style: italic;
   letter-spacing: 0.5px;
 }
 </style>

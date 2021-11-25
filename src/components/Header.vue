@@ -12,9 +12,10 @@ export default {
 </script>
 <style scoped>
     nav {
-        margin-left: 5%;
+        line-height: 100px;
     }
     p {
+        font-weight: 500;
         font-size: 36px;
         color: slategrey;
     }

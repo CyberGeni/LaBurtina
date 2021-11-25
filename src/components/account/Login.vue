@@ -12,10 +12,10 @@
     </div>
 </template>
 <script>
-import GuestHeader from '../guest-header.vue'
+import guestHeader from '../guest-header.vue'
 export default {
     components: {
-        'guest-header': GuestHeader
+        'guest-header': guestHeader
     }
 }
 </script>
@@ -24,13 +24,12 @@ export default {
         display: flex;
         width: 90%;
         max-width: 500px;
-        margin: auto;
+        margin: 1em auto;     
         flex-wrap: wrap;
-        overflow: hidden;
     }
     input {
-        padding: 10px;
-        width: 94%;
+        padding: 8px;
+        width: 100%;
     }
     form > * + * {
           margin-top: 1rem;
@@ -39,6 +38,9 @@ export default {
         width: 100%;
         text-align: right;
         color: orangered;
+    }
+    h1 {
+        margin: 1em 0;
     }
     p {
         width: 100%;
