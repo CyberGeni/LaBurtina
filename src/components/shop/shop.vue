@@ -17,8 +17,10 @@ export default {
 <style scoped>
     main {
         width: 100%;
+        max-width: 500px;
         margin: auto;
         margin-top: 100px;
+        padding: 24px;
     }
     button {
         padding: 10px 12px;
