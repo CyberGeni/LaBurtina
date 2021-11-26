@@ -1,7 +1,7 @@
 <template>
     <main>
         <product-item></product-item>
-        <router-link to="/account"><button>Account Settings</button></router-link>
+        <router-link to="/cart"><button>Visit cart (that you left empty, of course)</button></router-link>
     </main>
 </template>
 <script>
