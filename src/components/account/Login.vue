@@ -1,6 +1,6 @@
 <template>
     <div>
-        <guest-header></guest-header>
+    <!--    <guest-header></guest-header> -->
         <h1>Log into your account</h1>
         <form action="" method="get" class="space-y-12">
             <input type="email" placeholder="Email or Username" required>
@@ -24,7 +24,7 @@ export default {
         display: flex;
         width: 90%;
         max-width: 500px;
-        margin: 1em auto;     
+        margin: 5em auto;     
         flex-wrap: wrap;
     }
     input {
@@ -35,6 +35,7 @@ export default {
           margin-top: 1rem;
     }
     small {
+        display: inline-grid;
         width: 100%;
         text-align: right;
         color: orangered;

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <guest-header></guest-header>
+    <!--    <guest-header></guest-header>  -->
         <h1>Create an account</h1>
         <form action="" method="get" class="grid">
             <input type="text" placeholder="Full Name">
@@ -27,7 +27,7 @@ export default {
         width: 90%;
         max-width: 500px;
         margin: auto;
-        margin: 1em auto;   
+        margin: 5em auto;   
         flex-wrap: wrap;
     }
     input {

@@ -1,4 +1,4 @@
-import Shop from './components/shop/shop.vue'
+/* import Shop from './components/shop/shop.vue'
 import Login from './components/account/login.vue'
 import Signup from './components/account/signup.vue'
 import Account from './components/account/account.vue'
@@ -13,4 +13,4 @@ export default [
     {path: '/shop', component: Shop},
     {path: '/cart', component: Cart},
     {path: '/checkout', component: Checkout}
-]
+] */
