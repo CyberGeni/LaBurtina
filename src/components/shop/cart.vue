@@ -1,5 +1,6 @@
 <template>
     <main>
+        <app-header></app-header>
         <cart-table></cart-table>
         <cart-summary></cart-summary>
     </main>
@@ -8,10 +9,12 @@
 
 import CartSummary from './cart-summary.vue'
 import CartTable from './cart-table.vue'
+import Header from '../header.vue'
 export default {
     components: {
         'cart-summary': CartSummary,
-        'cart-table': CartTable
+        'cart-table': CartTable,
+        'app-header': Header
     }
 }
 </script>

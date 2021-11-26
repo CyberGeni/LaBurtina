@@ -1,15 +1,18 @@
 <template>
     <main>
+        
         <product-item></product-item>
-        <router-link to="/cart"><button>Visit cart (that you left empty, of course)</button></router-link>
+        <router-link to="/cart"><button>Visit your cart (that you left empty, of course)</button></router-link>
     </main>
 </template>
 <script>
 
 import ProductItem from './product-item.vue'
 
+
 export default {
     components: {
+        
         'product-item': ProductItem,
     }
 }
