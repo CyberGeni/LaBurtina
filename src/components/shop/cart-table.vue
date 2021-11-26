@@ -215,6 +215,10 @@ export default {
             border-radius: 4px;
             max-width: 100px;
         }
+        .quantity p {
+            align-self: center;
+            font-size: 14px;
+        }
         button {
             align-self: flex-end;
             height: fit-content;
