@@ -1,5 +1,44 @@
 <template>
     <main>
+        <!-- Cart for mobile view. This is hidden on screen larger than 640px -->
+        <section>
+            <h1>My Cart</h1>
+            <div class="main-cart">
+                <div class="cart-info">
+                    <img src="src\assets\images\wallpaper.jpg" alt="">
+                    <div class="text-info">
+                        <h4>Wallpaper</h4>
+                        <p>A nice wallpaper to use on your mobile device. Very minimalistic.</p> 
+                        <h2>${{ getTotal }}{{total}}</h2>
+                    </div>
+                    
+                    <div class="quantity">
+                        <img @click="quantity--" src="src\assets\images\minus.svg" alt="">
+                        <p>{{ quantity }}</p>
+                        <img @click="quantity++" src="src\assets\images\plus.svg" alt="">
+                    </div> 
+                </div>                
+                <button>Remove</button>        
+            </div>   
+            <div class="main-cart">
+                <div class="cart-info">
+                    <img src="src\assets\images\wallpaper.jpg" alt="">
+                    <div class="text-info">
+                        <h4>Wallpaper</h4>
+                        <p>A nice wallpaper to use on your mobile device. Very minimalistic.</p> 
+                        <h2>${{ getTotal }}{{total}}</h2>
+                    </div>
+                    
+                    <div class="quantity">
+                        <img @click="quantity--" src="src\assets\images\minus.svg" alt="">
+                        <p>{{ quantity }}</p>
+                        <img @click="quantity++" src="src\assets\images\plus.svg" alt="">
+                    </div> 
+                </div>                
+                <button>Remove</button>        
+            </div>             
+        </section>
+        <!-- Cart for desktop view. This is hidden on screen smaller than 640px -->
         <table>
             <thead>
                 <th>IMAGE</th>
@@ -20,7 +59,7 @@
                         <img @click="quantity++" src="src\assets\images\plus.svg" alt="">
                     </div>
                 </td>
-                <td> ${{ getTotal() }}{{total}} </td>
+                <td> ${{ getTotal }}{{total}} </td>
                 <td><img src="src\assets\images\delete.svg"></td>
             </tbody>
         </table>
@@ -35,7 +74,7 @@ export default {
             total: 0
         };
     },
-    methods: {
+    computed: {
         getTotal () {
             this.total = this.price * this.quantity
         }
@@ -48,7 +87,7 @@ export default {
         justify-content: start;
         overflow-x: scroll;
         width: 90%;
-        margin: 3.5em auto;
+        margin: 1em auto;
     }
     table {
         max-height: auto;        
@@ -97,17 +136,94 @@ export default {
     ::-webkit-scrollbar-button {
         -webkit-appearance: none;
         width: 0;
-    /*    background-color: orangered; */
+        background-color: orangered;
     }
     ::-webkit-scrollbar-thumb {
         padding: 1px;
         background-color: orangered;
         border-radius: 4px;
     }
+    section {
+        display: none;
+    }
     @media (min-width: 640px) {
         main {
             overflow-x: hidden;       
             padding: 1em 0;
+        }
+    }
+    @media (max-width: 640px) {
+        table {
+            display: none;
+        }
+        h1 {
+            line-height: 70px;
+            padding-left: 0.7em;
+        }
+        main {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            overflow-x: hidden;       
+            padding: 0.5em 0;
+            margin: auto; 
+            margin-bottom: 2em;          
+            width: 90%;           
+            max-width: 500px;
+            background: rgb(247, 251, 255);
+        }
+        section {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            width: 100%;
+        }
+        .main-cart {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            padding: 1.1em 1em;
+            border-bottom: 1px solid rgb(214, 217, 219);
+        }
+        .main-cart img {
+            object-position: center;
+            object-fit: cover;
+            max-height: 100px;
+            padding: 0.2em;
+        }
+        .cart-info {
+            display: flex;
+            flex-direction: row;        
+            justify-content: space-between;
+            align-items: center;
+            margin: auto 0;
+            width: 100%;
+        }
+        .text-info > * + * {
+            margin-top: 0.5rem;
+        }
+        .text-info {    
+            padding: 8px;
+        }
+        .quantity {
+            display: flex;
+            flex-grow: 1;
+            justify-content: space-evenly;
+            padding: 2px;
+            border: 1px solid rgb(229, 233, 236);
+            border-radius: 4px;
+            max-width: 100px;
+        }
+        button {
+            align-self: flex-end;
+            height: fit-content;
+            padding: 6px 12px;
+            background-color: orangered;
+            border: none;
+            color: white;
+            font-weight: 600;
+            border-radius: 2px;
         }
     }
 </style>

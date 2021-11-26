@@ -24,8 +24,9 @@ export default {
 
 <style>
 
-/* override defaults */
-  *, *::before, *::after {
+/* override default styling */
+
+*, *::before, *::after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -47,20 +48,19 @@ export default {
     color: currentColor;
   }
   ::-webkit-scrollbar {
-        -webkit-appearance: none;
-        width: 6px;
-        background-color: rgb(226, 228, 231);
-        border-radius: 4px;
-        padding: 1px;
+    -webkit-appearance: none;
+    width: 6px;
+    background-color: rgb(226, 228, 231);
+    border-radius: 4px;
+    padding: 1px;
     }
-    ::-webkit-scrollbar-button {
-        -webkit-appearance: none;
-        height: 0;
-    /*    background-color: orangered; */
+  ::-webkit-scrollbar-button {
+    -webkit-appearance: none;
+    height: 0;
     }
-    ::-webkit-scrollbar-thumb {
-        padding: 1px;
-        background-color: #999;
-        border-radius: 4px;
-    }
+  ::-webkit-scrollbar-thumb {
+    padding: 1px;
+    background-color: #999;
+    border-radius: 4px;
+  }
 </style>

@@ -29,8 +29,8 @@ export default {
         padding: 0 2em;
         height: 75px;
         box-shadow: 0px -6px 16px 0px slategrey;
-        backdrop-filter: blur(16px) saturate(180%);
-        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        backdrop-filter: blur(32px) saturate(100%);
+        -webkit-backdrop-filter: blur(20px) saturate(100%);
     }
     ul p {
         position: absolute;
