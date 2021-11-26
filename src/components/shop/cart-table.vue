@@ -9,7 +9,7 @@
                     <div class="text-info">
                         <h4>Wallpaper</h4>
                         <p>A nice wallpaper to use on your mobile device. Very minimalistic.</p> 
-                        <h2>${{ getTotal }}{{total}}</h2>
+                        <h2>&#8358;{{ getTotal }}{{total}}</h2>
                     </div>
                     
                     <div class="quantity">
@@ -26,7 +26,7 @@
                     <div class="text-info">
                         <h4>Wallpaper</h4>
                         <p>A nice wallpaper to use on your mobile device. Very minimalistic.</p> 
-                        <h2>${{ getTotal }}{{total}}</h2>
+                        <h2>&#8358;{{ getTotal }}{{total}}</h2>
                     </div>
                     
                     <div class="quantity">
@@ -51,7 +51,7 @@
             <tbody>
                 <td class="image-preview"><img src="src\assets\images\wallpaper.jpg" alt=""></td>
                 <td>Wallpaper</td>
-                <td> ${{ price }}</td>
+                <td> &#8358;{{ price }}</td>
                 <td>
                     <div>
                         <img @click="quantity--" src="src\assets\images\minus.svg" alt="">
@@ -59,7 +59,7 @@
                         <img @click="quantity++" src="src\assets\images\plus.svg" alt="">
                     </div>
                 </td>
-                <td> ${{ getTotal }}{{total}} </td>
+                <td> &#8358;{{ getTotal }}{{total}} </td>
                 <td><img src="src\assets\images\delete.svg"></td>
             </tbody>
         </table>

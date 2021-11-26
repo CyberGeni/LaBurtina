@@ -3,15 +3,15 @@
         <p class="title">Cart Totals</p>
         <div class="column">
             <p>Sub Total</p>
-            <p>$250</p>
+            <p>&#8358;250</p>
         </div>
         <div class="column">
             <p>Shipping</p>
-            <p>$50</p>
+            <p>&#8358;50</p>
         </div>
         <div class="column">
             <p>Total</p>
-            <p>$300</p>
+            <p>&#8358;300</p>
         </div>
         <router-link to="/checkout"><button>PROCEED TO CHECKOUT</button></router-link>
     </main>

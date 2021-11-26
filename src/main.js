@@ -40,7 +40,3 @@ new Vue({
 
 // typing animation 
 
-var typed = new Typed('#typed', {
-  stringsElement: '#typed-strings',
-  smartBackspace: true,
-});
