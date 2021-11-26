@@ -1,6 +1,5 @@
 <template>
     <div class="account-options">
-        <guest-header></guest-header>
         <div class="buttons">
             <button @click="login = true, signup = false">Login</button>
             <button @click="signup = true, login = false">Sign Up</button>

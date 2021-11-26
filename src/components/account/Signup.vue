@@ -8,7 +8,7 @@
             <input type="password" placeholder="Password">
             <input type="password" placeholder="Repeat your Password">
             
-            <input type="button" value="REGISTER">
+            <input type="submit" value="REGISTER">
             <p>Already have an account? <router-link to='/login'>Log In</router-link></p>
         </form>
     </div>
@@ -48,5 +48,11 @@ export default {
     p {
         width: 100%;
         text-align: center;
+    }
+    a {
+        color: orangered;
+    }
+    a:hover {
+        text-decoration: underline;
     }
 </style>

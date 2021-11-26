@@ -1,28 +1,24 @@
 <template>
-    <div>
-        <app-header></app-header>
+    <main>
         <product-item></product-item>
         <router-link to="/account"><button>Account Settings</button></router-link>
-    </div>
+    </main>
 </template>
 <script>
-import Header from '../header.vue'
+
 import ProductItem from './product-item.vue'
-import Login from '../account/login.vue'
-import Account from '../account/account.vue'
+
 export default {
     components: {
-        'app-header': Header,
         'product-item': ProductItem,
-        'login': Login,
-        'account': Account
     }
 }
 </script>
 <style scoped>
-    div {
-        width: 90%;
+    main {
+        width: 100%;
         margin: auto;
+        margin-top: 100px;
     }
     button {
         padding: 10px 12px;

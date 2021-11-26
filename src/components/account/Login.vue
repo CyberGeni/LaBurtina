@@ -3,10 +3,10 @@
         <guest-header></guest-header>
         <h1>Log into your account</h1>
         <form action="" method="get" class="space-y-12">
-            <input type="email" placeholder="Email or Username">
-            <input type="password" placeholder="Password">
+            <input type="email" placeholder="Email or Username" required>
+            <input type="password" placeholder="Password" required>
             <small>Forgot Password?</small>
-            <input type="button" value="LOGIN" class="px-10 py-3">
+            <input type="submit" value="LOGIN" class="px-10 py-3">
             <p>Don't have an account? <router-link to='/signup'>Create an account</router-link></p>
         </form>
     </div>
@@ -45,5 +45,11 @@ export default {
     p {
         width: 100%;
         text-align: center;
+    }
+    a {
+        color: orangered;
+    }
+    a:hover {
+        text-decoration: underline;
     }
 </style>
