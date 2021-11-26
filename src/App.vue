@@ -6,13 +6,13 @@
 </template>
 
 <script>
-import Shop from './components/shop/shop.vue'
 import Header from './components/header.vue'
+import Shop from './components/shop/shop.vue'
 
 export default {
   components: {
-    'shop': Shop,
-    'app-header': Header
+    'app-header': Header,
+    'shop': Shop,   
     },
   data () {
     return {

@@ -1,15 +1,15 @@
 <template>
     <main>
         <!-- Cart for mobile view. This is hidden on screen larger than 640px -->
+        
         <section>
-            <h1>My Cart</h1>
             <div class="main-cart">
                 <div class="cart-info">
                     <img src="src\assets\images\wallpaper.jpg" alt="">
                     <div class="text-info">
                         <h4>Wallpaper</h4>
                         <p>A nice wallpaper to use on your mobile device. Very minimalistic.</p> 
-                        <h2>&#8358;{{ getTotal }}{{total}}</h2>
+                        <h2>&#8358;{{ total }}</h2>
                     </div>
                     
                     <div class="quantity">
@@ -19,24 +19,7 @@
                     </div> 
                 </div>                
                 <button>Remove</button>        
-            </div>   
-            <div class="main-cart">
-                <div class="cart-info">
-                    <img src="src\assets\images\wallpaper.jpg" alt="">
-                    <div class="text-info">
-                        <h4>Wallpaper</h4>
-                        <p>A nice wallpaper to use on your mobile device. Very minimalistic.</p> 
-                        <h2>&#8358;{{ getTotal }}{{total}}</h2>
-                    </div>
-                    
-                    <div class="quantity">
-                        <img @click="quantity--" src="src\assets\images\minus.svg" alt="">
-                        <p>{{ quantity }}</p>
-                        <img @click="quantity++" src="src\assets\images\plus.svg" alt="">
-                    </div> 
-                </div>                
-                <button>Remove</button>        
-            </div>             
+            </div>               
         </section>
         <!-- Cart for desktop view. This is hidden on screen smaller than 640px -->
         <table>
@@ -75,7 +58,7 @@ export default {
         };
     },
     computed: {
-        getTotal () {
+        getTotal: function () {
             this.total = this.price * this.quantity
         }
     }
