@@ -70,7 +70,14 @@ export default {
         justify-content: start;
         overflow-x: scroll;
         width: 90%;
-        margin: 1em auto;
+        margin: 0.7em auto;
+    }
+    h4 {
+        font-family: 'Outfit', 'Segoe UI';
+        font-size: 20px;
+    }
+    p {
+        color: rgb(61, 61, 61);
     }
     table {
         max-height: auto;        
@@ -100,6 +107,7 @@ export default {
         border: 1px solid rgb(229, 233, 236);
         width: 80%;
     }
+
     .image-preview {
         width: 50px;
         height: 60px;

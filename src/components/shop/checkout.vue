@@ -1,6 +1,7 @@
 <template>
     <main>
-        <p class="top-action">RETURNING CUSTOMER? <router-link to="/login"><span>CLICK HERE TO LOGIN</span></router-link></p>
+        <guest-header></guest-header>
+        <section>          
         <div class="container">
             <div class="column">
                 <h2>Billing details</h2>
@@ -33,9 +34,13 @@
                         <label for="name">Phone</label>
                         <input type="number" placeholder="Phone Number">
                     </div>
-                    <input type="checkbox" name="createAccount" id="">
-                    <label for="">Create an account?</label>
-                    <div class="ifCreateAccount">
+                    <div class="createAccount">
+                       <input type="checkbox" name="createAccount" id="" @click="createAccount = !createAccount">
+                        <label for="">Create an account?</label> 
+                    </div>
+                    
+                    <p class="createAccount" v-if="createAccount">Create an account by entering the information below. If you are a returning customer (you have made a purchase from this store before) please login at the top of the page.</p>
+                    <div class="ifCreateAccount" v-if="createAccount">
                         <div class="input-field">
                             <label for="name">Account Password <sup>*</sup></label>
                             <input type="text" placeholder="Enter a password for your new account">
@@ -47,16 +52,25 @@
                     </div>
                 </form>
             </div>
-        <!--    <div class="column">
-                <h2>Order Summary</h2>
-                table
-            </div> -->
-        </div>
+            <order-summary></order-summary>
+        </div> 
+        </section>     
+           
     </main>
 </template>
 <script>
+import guestHeader from '../guest-header.vue'
+import OrderSummary from './order-summary.vue'
 export default {
-    
+    components: { 
+      'guest-header': guestHeader,  
+      'order-summary': OrderSummary
+    },
+    data() {
+        return {
+            createAccount: false
+        }
+    },
 }
 </script>
 <style scoped>
@@ -64,8 +78,15 @@ export default {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin: 100px auto;
+        margin: 80px auto;
+        width: 100%;
+    }
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         width: 90%;
+        margin: auto;
     }
     /*.container > * + * {
       margin-left: 1rem;
@@ -98,16 +119,15 @@ export default {
     input {
         background-color: #f7f7f7;
         border: 1px solid #ccc;
-        padding: 12px;
+        padding: 18px;
+    }
+    .createAccount {
+        color: rgb(82, 82, 82);
+        padding: 10px 0;
     }
     textarea {
         background-color: #f7f7f7;
         border: 1px solid #ccc;
         padding: 12px;
     }
-    
-    
-    
-    
-    
 </style>
