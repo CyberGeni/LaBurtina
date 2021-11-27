@@ -34,7 +34,7 @@ export default {
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Lora', 'Segoe UI';
   }
-  ::placeholder, small, p, button, th, td {
+  ::placeholder, small, p, button, th, td, label {
     font-family: 'Outfit', 'Segoe UI';
   }
   ::placeholder {
@@ -46,6 +46,15 @@ export default {
   a {
     text-decoration: none;
     color: currentColor;
+  }
+  sup {
+    color: red;
+  }
+  input:focus, textarea:focus {
+    outline: #ccc;
+  }
+  input[type=text], input[type=email], input[type=number], input[type=address] {
+    font-family: 'Outfit', 'Segoe UI';
   }
   ::-webkit-scrollbar {
     -webkit-appearance: none;
