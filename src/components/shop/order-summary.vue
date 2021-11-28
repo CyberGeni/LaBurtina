@@ -39,16 +39,15 @@
                     </tfoot>
                 </table>
                 <div class="payment">
-                    <div class="payment-method-name" @click="cod = !cod, bank=false">
-                        <div>
-                            <input type="radio" id="cashon" name="paymentmethod" value="cash" :checked="false">
-                            <label class="custom-control-label" for="cashon">Cash On Delivery</label>
+                    <div class="single-payment-method">
+                        <div class="payment-method-name" @click="cod = !cod, bank=false">
+                                <input type="radio" id="directbank" name="paymentmethod" value="bank" class="custom-control-input">
+                                <label class="custom-control-label" for="directbank">Cash on delivery</label>
+                        </div>
+                        <div class="payment-method-details" v-if="bank">
+                            <p>Cash on delivery.</p>
                         </div>
                     </div>
-                    <div class="payment-method-details" v-if="cod">
-                        <p>Pay with cash upon delivery.</p>
-                    </div>
-                </div>
                     <div class="single-payment-method">
                         <div class="payment-method-name" @click="bank = !bank, cod=false">
                                 <input type="radio" id="directbank" name="paymentmethod" value="bank" class="custom-control-input">
@@ -59,6 +58,7 @@
                         </div>
                     </div>
                 </div>
+        </div>
     </div>
 </template>
 <script>
@@ -66,6 +66,7 @@ export default {
     data() {
         return {
             cod: false,
+            checked: false,
             bank: false,
             tAndC: false
         }
