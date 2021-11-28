@@ -39,25 +39,26 @@
                     </tfoot>
                 </table>
                 <div class="payment">
-                    <input type="radio" name="" id="">
-                    <input type="radio" name="" id="">
-                    <form action="">
-                        <div @click="cod = !cod">
-                            <input type="radio" name="cash" id="cod" value="cod">
-                            <label for="cod">Cash On Delivery (Lagos Only)</label>
-                            <p v-if="cod">Pay with cash upon delivery.</p> 
+                    <div class="payment-method-name" @click="cod = !cod, bank=false">
+                        <div>
+                            <input type="radio" id="cashon" name="paymentmethod" value="cash" :checked="false">
+                            <label class="custom-control-label" for="cashon">Cash On Delivery</label>
                         </div>
-                        <div @click="bank = !bank">
-                            <input type="radio" name="bank" id="bank" value="bank"  @click="bank = !bank">
-                            <label for="bank">Direct Bank Transfer</label>
-                            <p v-if="bank">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account..</p>  
-                        </div>                   
-                        <input type="checkbox" name="" id="">
-                        <label for="" @click="tAndC = !tAndC">I have read and agree to the website <strong> terms and conditions.</strong></label>
-                        <button v-if="tAndC" disabled>Place Order</button>
-                    </form>                    
+                    </div>
+                    <div class="payment-method-details" v-if="cod">
+                        <p>Pay with cash upon delivery.</p>
+                    </div>
                 </div>
-            </div>
+                    <div class="single-payment-method">
+                        <div class="payment-method-name" @click="bank = !bank, cod=false">
+                                <input type="radio" id="directbank" name="paymentmethod" value="bank" class="custom-control-input">
+                                <label class="custom-control-label" for="directbank">Direct Bank Transfer</label>
+                        </div>
+                        <div class="payment-method-details" v-if="bank">
+                            <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account..</p>
+                        </div>
+                    </div>
+                </div>
     </div>
 </template>
 <script>
@@ -73,7 +74,8 @@ export default {
 </script>
 <style scoped>
     .column {
-        max-width: 500px;
+        width: 100%;
+        max-width: 450px;
     }
     h2 {
         font-family: 'Outfit', 'Segoe UI';
@@ -90,14 +92,22 @@ export default {
         border: 1px solid #ccc;
     }
     th {
-        padding: 18px 0;
         border: 1px solid #ccc;
+        padding: 18px;
+        width: 100%;
     }
     td {
         padding: 18px 0;
         border: 1px solid #ccc;
         color: rgb(80, 80, 80);
     }
-    
+    .payment > * + * {
+        margin-top: 1em;
+    }
+    .payment-method-details {
+        background-color: #f1f1f1;
+        padding: 14px;
+        color: rgb(80, 80, 80);
+    }
     
 </style>

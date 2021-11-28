@@ -48,7 +48,7 @@
                     </div>
                     <div class="input-field">
                         <label for="name">Order Note</label>
-                        <textarea type="text" placeholder="Notes about your order, e.g special notes for delivery."></textarea>
+                        <textarea type="text" rows="10" placeholder="Notes about your order, e.g special notes for delivery."></textarea>
                     </div>
                 </form>
             </div>
@@ -84,15 +84,19 @@ export default {
     section {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         width: 90%;
         margin: auto;
     }
-    /*.container > * + * {
-      margin-left: 1rem;
-    }*/
+    .container {
+        display: flex;
+        justify-content: space-around;
+        flex-grow: 1;
+        flex-wrap: wrap;
+        width: 100%;
+    }  
     .column {
-        max-width: 500px;
+        width: 100%;
+        max-width: 450px;
     }
     p.top-action {
         padding: 12px 24px;
@@ -116,7 +120,7 @@ export default {
       margin-bottom: 1rem;
       margin-top: 0.5rem;
     }
-    input {
+    input, textarea {
         background-color: #f7f7f7;
         border: 1px solid #ccc;
         padding: 18px;
@@ -124,10 +128,5 @@ export default {
     .createAccount {
         color: rgb(82, 82, 82);
         padding: 10px 0;
-    }
-    textarea {
-        background-color: #f7f7f7;
-        border: 1px solid #ccc;
-        padding: 12px;
-    }
+    }  
 </style>
