@@ -1,5 +1,4 @@
 <template>
-    <div>
         <div class="column">
                 <h2>Order Summary</h2>
                 <table>
@@ -59,7 +58,6 @@
                     </div>
                 </div>
         </div>
-    </div>
 </template>
 <script>
 export default {
@@ -77,6 +75,7 @@ export default {
     .column {
         width: 100%;
         max-width: 450px;
+        margin: auto;
     }
     h2 {
         font-family: 'Outfit', 'Segoe UI';
