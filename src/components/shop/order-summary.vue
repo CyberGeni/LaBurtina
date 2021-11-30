@@ -102,9 +102,13 @@ export default {
         border: 1px solid #ccc;
         color: rgb(80, 80, 80);
     }
+    .payment {
+        margin-top: 1.5em;
+        
+    }
     .payment > * + * {
         margin-bottom: 1em;
-        margin-top: 1em;
+        margin-top: 1em;       
     }
     .single-payment-method > * + * {
         margin-bottom: 0.7em;
