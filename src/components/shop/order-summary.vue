@@ -10,15 +10,15 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><a href="single-product.html">Suscipit Vestibulum <strong> × 1</strong></a></td>
+                            <td><a href="">Peppered Suya<strong> × 1</strong></a></td>
                             <td>&#8358;165</td>
                         </tr>
                         <tr>
-                            <td><a href="single-product.html">Ami Vestibulum suscipit <strong> × 4</strong></a></td>
+                            <td><a href="">Chicken BBQ<strong> × 4</strong></a></td>
                             <td>&#8358;165</td>
                         </tr>
                         <tr>
-                            <td><a href="single-product.html">Vestibulum suscipit <strong> × 2</strong></a></td>
+                            <td><a href="">Goat Cheese w/ red raddichio spread<strong> × 2</strong></a></td>
                             <td>&#8358;165</td>
                         </tr>
                     </tbody>
