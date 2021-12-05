@@ -48,7 +48,7 @@
                         </div>
                     </div>
                     <div class="single-payment-method">
-                        <div class="payment-method-name" @click="bank = !bank, cod=false">
+                        <div class="payment-method-name" @click="bank = !bank, cod = false">
                                 <input type="radio" id="directbank" name="paymentmethod" value="bank" class="custom-control-input">
                                 <label class="custom-control-label" for="directbank">Direct Bank Transfer</label>
                         </div>
@@ -60,7 +60,7 @@
                         <input type="checkbox" name="terms" id="terms" @click="disabled = !disabled" v-bind="validationRules">
                         <label for="terms">I have read and accepted the <router-link to="">Terms and Conditions</router-link></label>
                     </div>
-                    <button disabled v-bind="validationRules">PLACE ORDER</button>
+                    <button disabled v-bind="validationRules"> PLACE ORDER </button>
                 </div>
         </div>
 </template>
