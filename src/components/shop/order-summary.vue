@@ -56,7 +56,11 @@
                             <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account..</p>
                         </div>
                     </div>
-                    <button>PLACE ORDER</button>
+                    <div class="tandc" @click="disabled = !disabled">
+                        <input type="checkbox" name="terms" id="terms" @click="disabled = !disabled" v-bind="validationRules">
+                        <label for="terms">I have read and accepted the <router-link to="">Terms and Conditions</router-link></label>
+                    </div>
+                    <button disabled v-bind="validationRules">PLACE ORDER</button>
                 </div>
         </div>
 </template>
@@ -67,8 +71,17 @@ export default {
             cod: false,
             checked: false,
             bank: false,
-            tAndC: false
+            tAndC: false,
+            disabled: false
         }
+    },
+    methods: {
+        get validationRules () {
+            return {
+                disabled: false
+            }
+    }
+
     },
 }
 </script>
