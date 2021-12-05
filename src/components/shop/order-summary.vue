@@ -60,6 +60,7 @@
                         <input type="checkbox" name="terms" id="terms" @click="disabled = !disabled" v-bind="validationRules">
                         <label for="terms">I have read and accepted the <router-link to="">Terms and Conditions</router-link></label>
                     </div>
+                    <!-- button will be disabled if user hasn't clicked terms and conditions -->
                     <button disabled v-bind="validationRules"> PLACE ORDER </button>
                 </div>
         </div>
